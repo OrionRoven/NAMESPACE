@@ -1,0 +1,7 @@
+1/13/22 - classwork
+  Decided to do blackjack
+  Thinking SIMPLE:
+    Blackjack is traditionally played with 6 decks, but for simplicity's sake, we plan to start with only one deck
+  Uploaded flag.jpg
+  Making a deck of cards:
+    We plan to make create an ArrayList of cards
