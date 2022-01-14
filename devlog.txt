@@ -1,10 +1,10 @@
-<Team Name>
-<Member 0 Name>
-<Member 1 Name>
-<Member 2 Name>
-pd <pd#>
+TNPG: NAMESPACE
+Paul Serbanescu
+Orion Roven
+Max Schneider
+pd 7
 ---------------------
-<Project Summary / Working Title>
+BLACKJACK (WIP)
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,3 +68,29 @@ yyyy-mm-dd
 <Member> :: <Thing member did.>
 ==============================================================
 
+
+Ascii art for playing cards:
+
+Suit in the middle:
+♥, ♠, ◆, ♣
+
+Face:
+ ___________
+│ A         │
+│           │
+│           │
+│     ♠     │
+│           │
+│           │
+│         A │
+ ‾‾‾‾‾‾‾‾‾‾‾
+Back:
+ ___________
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+│░░░░░░░░░░░│
+ ‾‾‾‾‾‾‾‾‾‾‾
