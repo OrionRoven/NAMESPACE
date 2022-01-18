@@ -1,6 +1,6 @@
 /** Class Card
  * stores suit, number, and value of a card
- 
+
 Ascii art for playing cards:
 
 Suit in the middle:
@@ -36,10 +36,11 @@ public class Card {
     public String suit;
     public String number;
     public int gameValue;
+    public String[] stringy;
 
     private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"));
     private static final ArrayList<Integer> GAMEVALUES = new ArrayList<>(Arrays.asList(11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10));
- 
+
     public Card() {
         suit = "Spade";
         number = "Ace";
@@ -53,10 +54,11 @@ public class Card {
     }
 
     public String toString() {
-        return number + " of " + suit + ": " + gameValue; 
+        return number + " of " + suit + ": " + gameValue;
     }
 
     public void display() {
+        this.stringy = CardArt.makeCard(number, suit);
         return;
     }
 }
