@@ -19,6 +19,9 @@ public class Woo {
         player.hit(deck);
         player.hit(deck);
         player.display();
+        player.hit(deck);
+        player.hit(deck);
+        player.display();
     }
 
 }

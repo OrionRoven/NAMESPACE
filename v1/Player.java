@@ -72,7 +72,11 @@ public class Player {
 
     public void display() {
       for (int x = 0; x < 9; x ++) {
-        System.out.println(CardArt.makeCard(hand.get(0))[x] + "   " + CardArt.makeCard(hand.get(1))[x]);
+        String lineToPrint = "";
+        for(int i = 0; i < hand.size(); i ++) {
+          lineToPrint+=(CardArt.makeCard(hand.get(i))[x] + "   ");
+        }
+        System.out.println(lineToPrint);
       }
     }
 }
