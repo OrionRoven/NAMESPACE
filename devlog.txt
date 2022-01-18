@@ -68,7 +68,7 @@ pserb :: v0 - create player, card, deck class with basic preliminary methods. th
           has method shuffle to shuffle deck (TODO: maybe alter the algo). the card class constructor takes in params suit and number, sets gamevalue based off number
 orion :: devlog - unresolved issues for printing cards next to eachother
 orion :: v1 - update suits to have ♥, ♠, ◆, ♣, rather than String representations of these characters
-max :: v1 - resolved cardArt issue (cards now print next to eachother)
+max :: v1 - resolved cardArt issue (cards now print next to eachother). made every card an array of Strings, so they can all be printed one line ata time.
 ==============================================================
 
 
