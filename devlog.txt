@@ -61,9 +61,11 @@ tales of wisdom gained...
 ==============================================================
 
 
-yyyy-mm-dd
+2022-01-18
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+pserb :: v0 - create player, card, deck class with basic preliminary methods. the player class stores stats (wins, losses), the player's hand
+          methods for hitting, betting, adding to balance. the Deck class constructor creates a deck of n decks (sets of 52 cards) in an ordered manner
+          has method shuffle to shuffle deck (TODO: maybe alter the algo). the card class constructor takes in params suit and number, sets gamevalue based off number
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
