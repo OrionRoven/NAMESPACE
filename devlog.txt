@@ -67,7 +67,8 @@ pserb :: v0 - create player, card, deck class with basic preliminary methods. th
           methods for hitting, betting, adding to balance. the Deck class constructor creates a deck of n decks (sets of 52 cards) in an ordered manner
           has method shuffle to shuffle deck (TODO: maybe alter the algo). the card class constructor takes in params suit and number, sets gamevalue based off number
 orion :: devlog - unresolved issues for printing cards next to eachother
-<Member> :: <Thing member did.>
+orion :: v1 - update suits to have ♥, ♠, ◆, ♣, rather than String representations of these characters
+max :: v1 - resolved cardArt issue (cards now print next to eachother)
 ==============================================================
 
 
