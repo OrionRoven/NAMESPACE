@@ -33,9 +33,9 @@ wow we so BOSS bc...
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
-
+Printing cards next to eachother has proven to me more difficult than expected.
+Our initial approach was to System.out.print (not println) each card, but that didn't work.
+It seems that we need to println the topmost section of multiple cards, then println each successive layer of the cards.
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
@@ -51,13 +51,13 @@ tales of wisdom gained...
 
 
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
 
@@ -66,7 +66,7 @@ tales of wisdom gained...
 pserb :: v0 - create player, card, deck class with basic preliminary methods. the player class stores stats (wins, losses), the player's hand
           methods for hitting, betting, adding to balance. the Deck class constructor creates a deck of n decks (sets of 52 cards) in an ordered manner
           has method shuffle to shuffle deck (TODO: maybe alter the algo). the card class constructor takes in params suit and number, sets gamevalue based off number
-<Member> :: <Thing member did.>
+orion :: devlog - unresolved issues for printing cards next to eachother
 <Member> :: <Thing member did.>
 ==============================================================
 
