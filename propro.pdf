@@ -1,0 +1,54 @@
+Plan
+Game: Black Jarck
+Elements:
+• Cards
+• Dealer Hand
+• Player Hand (s)
+* Balance
+• Bets
+Game play:
+1. Deal hands to player and dealer
+  a. if Dealer has a 10-val and player does not have natural
+    i. Check for Blackjack
+      Y: Collect Bet
+      N: Nothing
+  b. if Dealer has an ace and player does not have a natural
+    i. offer insurance
+    ii. Check for blackjack
+      y: Collect bet
+         Pay Insurance
+      n: Collect Insurance
+  c. Both have naturals
+    i. push
+  d. Only player has natural
+    i. pay 1.5x bet
+2. Player Turn
+  a. offer Surrender
+    Y: Collect .5 bet
+    N: Nothing
+  b. if pair
+    i. offer split
+      y: Make two hands
+      n: repeat step 2 for both hands
+  c. offer double
+    y: how much
+       deal another card
+       end turn
+    n: Nothing
+  d. ask to hit
+    y: give card
+       if player exceeds 21, end turn
+       repeat 2.d
+    n: end turn
+3. Dealer plays
+    a. check for bust
+      y: collect main bet
+      n: if dealer total is above 16
+        y: stop
+        n: ask for new card
+    b. check for winner
+      i. If Dealer is above 21
+        y: Give main bet
+        n: Check who is higher
+          Player: Give main bet
+          Dealer: Collect Main bet
