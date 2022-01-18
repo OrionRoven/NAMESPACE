@@ -43,8 +43,15 @@ public class Deck {
         return _data.get(index);
     }
 
+    // pass thru functionality
+    public Card remove(int index) {
+        return _data.remove(index);
+    }
+
     public void shuffle() {
-        //TODO: write method
-        return;
+        //TODO: change shuffle algo?
+        for (int i = 0; i < _size; i++) {
+            _data.set( (int)(Math.random()*52) , _data.get(i));
+        }
     }
 }
