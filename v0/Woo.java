@@ -1,17 +1,11 @@
 public class Woo {
+
     public static void main(String[] args) {
-        for (int i = 0; i < 2; i++) {
-            System.out.print(
-                "\n ___________" +
-                "\n│ A         │" +
-                "\n│           │" +
-                "\n│           │" +
-                "\n│     ♠     │" +
-                "\n│           │" +
-                "\n│           │" +
-                "\n│         A │" +
-                "\n ‾‾‾‾‾‾‾‾‾‾‾"
-            );
-        }
+        Deck deck = new Deck(1);
+        // System.out.println(deck);
+
+        Player player = new Player();
+        System.out.println(player.hit(deck));
     }
+
 }
