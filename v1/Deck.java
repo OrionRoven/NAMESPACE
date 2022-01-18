@@ -51,7 +51,10 @@ public class Deck {
     public void shuffle() {
         //TODO: change shuffle algo?
         for (int i = 0; i < _size; i++) {
-            _data.set( (int)(Math.random()*52) , _data.get(i));
+	    int fresh =(int)( Math.random()*52);
+            Card dummy = _data.get(i);
+	    _data.set(i, _data.get(fresh));
+	    _data.set(fresh, dummy);
         }
     }
 }

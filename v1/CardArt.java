@@ -1,6 +1,7 @@
 public class CardArt {
 
   public static String[] makeCard(Card input) {
+	if (input.number != 10) {
     String[] _data= new String[9];
     _data[0]=" ________ ";
     _data[1]="| " + input.number + "      |";
@@ -11,6 +12,8 @@ public class CardArt {
     _data[6]="|        |";
     _data[7]="|      " + input.number + " |";
     _data[8]=" ‾‾‾‾‾‾‾‾ ";
+}
+
     return _data;
 
   }
