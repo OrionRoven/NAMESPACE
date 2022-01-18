@@ -12,10 +12,10 @@ public class Woo {
         deck.shuffle();
         // System.out.println(deck);
 
-        // while (player.handValue() < 21) {
-        //     System.out.println(player.hit(deck));
-        //     System.out.println(player.handValue());
-        // }
+        while (player.handValue() < 21) {
+            System.out.println(player.hit(deck));
+            System.out.println(player.handValue());
+        }
         player.hit(deck);
         player.hit(deck);
         player.display();
