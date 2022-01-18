@@ -2,7 +2,7 @@ public class CardArt {
 
   public static String[] makeCard(Card input) {
 	  		String[] _data= new String[9];
-	if (input.number < 10) {
+	if (input.number!="10") {
 
    	 _data[0]=" ________ ";
    	 _data[1]="| " + input.number + "      |";
