@@ -36,6 +36,8 @@ UNRESOLVED ISSUES
 Printing cards next to eachother has proven to me more difficult than expected.
 Our initial approach was to System.out.print (not println) each card, but that didn't work.
 It seems that we need to println the topmost section of multiple cards, then println each successive layer of the cards.
+If the terminal size is small, and the number of cards is large, then printing cards starts to get funky, but this can always be resolved by increasing the terminal size.
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
@@ -69,6 +71,7 @@ pserb :: v0 - create player, card, deck class with basic preliminary methods. th
 orion :: devlog - unresolved issues for printing cards next to eachother
 orion :: v1 - update suits to have ♥, ♠, ◆, ♣, rather than String representations of these characters
 max :: v1 - resolved cardArt issue (cards now print next to eachother). made every card an array of Strings, so they can all be printed one line ata time.
+orion :: v1 - implemented Scanner for hit or stand (hit works and prints another card), still unsure of what to do after stand
 ==============================================================
 
 

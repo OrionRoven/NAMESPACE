@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class Woo {
 
     public static void main(String[] args) {
         Deck deck = new Deck(1);
+        Scanner yuki = new Scanner(System.in);
         // System.out.println(deck);
 
         Player player = new Player();
@@ -17,10 +20,24 @@ public class Woo {
 //          System.out.println(player.handValue());
 //      }
         player.hit(deck);
-        player.hit(deck);
+
+        player.display();
+
+        System.out.println("Hit or stand");
+        if (yuki.nextLine().toLowerCase().equals("hit")) {
+          player.hit(deck);
+        }
+        else if (yuki.nextLine().toLowerCase().equals("stand")) {
+          //stand
+        }
+        player.display();
+
+
+        // player.hit(deck);
+        // player.hit(deck);
         // player.display();
-        player.hit(deck);
-        player.hit(deck);
+        // player.hit(deck);
+        // player.hit(deck);
         // player.display();
 
         // Player p2 = new Player();
@@ -31,7 +48,7 @@ public class Woo {
         // p2.addCard(new Card("♣", "A"));
         // System.out.println(p2.handValue());
 
-        
+
 
 /**
 Game Plan:

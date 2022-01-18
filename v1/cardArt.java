@@ -1,4 +1,4 @@
-public class CardArt {
+public class cardArt {
 
   public static String[] makeCard(Card input) {
 	  		String[] _data= new String[9];
