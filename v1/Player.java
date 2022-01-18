@@ -42,15 +42,11 @@ public class Player {
     // ace default gameValue is 11
     public int handValue() {
         int sum = 0;
-        boolean hasAce = false;
         for (int i = 0; i < hand.size(); i++) {
             sum += hand.get(i).gameValue;
-            if (hand.get(i).gameValue == 11)
-                hasAce = true;
+            if ((hand.get(i).gameValue == 11) && (sum > 21))
+                sum -= 10;
         }
-        // if over 21, but has ace, ace becomes value of 1 (same as subtracting 10)
-        if (sum > 21 && hasAce)
-            sum -= 10;
         return sum;
     }
 
@@ -79,4 +75,10 @@ public class Player {
         System.out.println(lineToPrint);
       }
     }
+
+    public ArrayList<Card> addCard(Card card) {
+        hand.add(card);
+        return hand;
+    }
+
 }

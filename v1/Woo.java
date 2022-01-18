@@ -18,10 +18,20 @@ public class Woo {
 //      }
         player.hit(deck);
         player.hit(deck);
-        player.display();
+        // player.display();
         player.hit(deck);
         player.hit(deck);
-        player.display();
+        // player.display();
+
+        // Player p2 = new Player();
+        // p2.addCard(new Card("♠", "A"));
+        // System.out.println(p2.handValue());
+        // p2.addCard(new Card("♥", "A"));
+        // System.out.println(p2.handValue());
+        // p2.addCard(new Card("♣", "A"));
+        // System.out.println(p2.handValue());
+
+        
 
 /**
 Game Plan:
