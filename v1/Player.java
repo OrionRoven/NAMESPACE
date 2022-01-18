@@ -4,14 +4,14 @@ import java.util.ArrayList;
  * stores player stats:
  * money balance, number of wins, number of losses
  * TODO: other stats?
- * 
+ *
  * methods:
  * hit() - draw card from deck, add to hand
  * handValue()
  * stand()
  * bet()
  * addBalance()
- * 
+ *
  */
 
 public class Player {
@@ -68,5 +68,11 @@ public class Player {
     public int addBalance(int amount) {
         balance += amount;
         return balance;
+    }
+
+    public void display() {
+      for (int x = 0; x < 9; x ++) {
+        System.out.println(CardArt.makeCard(hand.get(0))[x] + "   " + CardArt.makeCard(hand.get(1))[x]);
+      }
     }
 }

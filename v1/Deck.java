@@ -11,8 +11,8 @@ public class Deck {
     private int _size;
     private ArrayList<Card> _data;
 
-    private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"));
-    private static final ArrayList<String> SUITS = new ArrayList<>(Arrays.asList("Spades", "Clubs", "Diamonds", "Hearts"));
+    private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
+    private static final ArrayList<String> SUITS = new ArrayList<>(Arrays.asList("♠", "♣", "◆", "♥"));
 
     public Deck() {
         _size = 0;

@@ -38,7 +38,7 @@ public class Card {
     public int gameValue;
     public String[] stringy;
 
-    private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"));
+    private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
     private static final ArrayList<Integer> GAMEVALUES = new ArrayList<>(Arrays.asList(11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10));
 
     public Card() {
@@ -57,8 +57,5 @@ public class Card {
         return number + " of " + suit + ": " + gameValue;
     }
 
-    public void display() {
-        this.stringy = CardArt.makeCard(number, suit);
-        return;
-    }
+
 }
