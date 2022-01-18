@@ -22,6 +22,18 @@ public class Woo {
         player.hit(deck);
         player.hit(deck);
         player.display();
+
+/**
+Game Plan:
+Show player balance and ask for bet
+Initialize deck
+Have player and dealer hit
+Check for naturals
+Offer props
+hit and stand
+pay out
+restart
+**/
     }
 
 }
