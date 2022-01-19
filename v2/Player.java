@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /** Class Player
  * stores player stats:
@@ -83,7 +84,7 @@ public class Player {
       Scanner look = new Scanner(System.in);
       if (look.nextLine().toLowerCase().equals("y")) {
         System.out.println("How much do you want to insure. Remember, you can only insure half your main bet, but if the dealer has BlackJack you get paid back double.");
-        int insuranceBet = look.nextLine();
+        int insuranceBet = look.nextLine(); // TODO: String cannot be converted to int
         System.out.println("You have insured for $" + insuranceBet + "");
         if (badGuy.handValue() == 21) {
           System.out.println("Congrats! The Dealer had Blackjack. You have been payed $" + (insuranceBet*2));

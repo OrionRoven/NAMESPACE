@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Dealer {
   private ArrayList<Card> hand;
 
@@ -39,5 +41,4 @@ public class Dealer {
   }
 
 
-  }
 }
