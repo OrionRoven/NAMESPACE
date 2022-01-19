@@ -8,6 +8,7 @@ public class Woo {
         // System.out.println(deck);
 
         Player player = new Player();
+        Player dealer = new Player();
         // System.out.println(player.bet(100));
 
         // System.out.println(player.addBalance(500));
@@ -26,11 +27,12 @@ public class Woo {
         System.out.println("Hit or stand");
         if (yuki.nextLine().toLowerCase().equals("hit")) {
           player.hit(deck);
+          player.display();
         }
         else if (yuki.nextLine().toLowerCase().equals("stand")) {
-          //stand
+          dealer.hit(deck);
+          dealer.display();
         }
-        player.display();
 
 
         // player.hit(deck);
