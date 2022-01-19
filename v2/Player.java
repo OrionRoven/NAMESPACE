@@ -77,22 +77,22 @@ public class Player {
       }
     }
 
-    public static void insurance(Dealer badGuy) {
-  		System.out.println("Dealer has an ace. Do you want insurance?");
-      System.out.println("Yes: Y");
-      System.out.println("No: N");
-      Scanner look = new Scanner(System.in);
-      if (look.nextLine().toLowerCase().equals("y")) {
-        System.out.println("How much do you want to insure. Remember, you can only insure half your main bet, but if the dealer has BlackJack you get paid back double.");
-        int insuranceBet = look.nextLine(); // TODO: String cannot be converted to int
-        System.out.println("You have insured for $" + insuranceBet + "");
-        if (badGuy.handValue() == 21) {
-          System.out.println("Congrats! The Dealer had Blackjack. You have been payed $" + (insuranceBet*2));
-        } else {
-          System.out.println("Sorry, the Dealer did not have blackjack and your insurance bet has been collected");
-        }
-      }
-  	}
+    // public static void insurance(Dealer badGuy) {
+  	// 	System.out.println("Dealer has an ace. Do you want insurance?");
+    //   System.out.println("Yes: Y");
+    //   System.out.println("No: N");
+    //   Scanner look = new Scanner(System.in);
+    //   if (look.nextLine().toLowerCase().equals("y")) {
+    //     System.out.println("How much do you want to insure. Remember, you can only insure half your main bet, but if the dealer has BlackJack you get paid back double.");
+    //     // int insuranceBet = look.nextLine(); // TODO: String cannot be converted to int
+    //     System.out.println("You have insured for $" + insuranceBet + "");
+    //     if (badGuy.handValue() == 21) {
+    //       System.out.println("Congrats! The Dealer had Blackjack. You have been payed $" + (insuranceBet*2));
+    //     } else {
+    //       System.out.println("Sorry, the Dealer did not have blackjack and your insurance bet has been collected");
+    //     }
+    //   }
+  	// }
 
   	public static void split() {
 
