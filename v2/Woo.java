@@ -1,68 +1,52 @@
-import java.util.Scanner;
+/** Class Woo
+ * Main game loop
+ */
+
+ import java.util.Scanner;
 
 public class Woo {
+  public static void main(String[] args) {
+    // init gameOver state
+    boolean gameOver = false;
 
-    public static void main(String[] args) {
-        Deck deck = new Deck(1);
-        Scanner yuki = new Scanner(System.in);
-        // System.out.println(deck);
+    // init player and dealer
+    Player player = new Player();
+    // Dealer dealer = new Dealer();
 
-        Player player = new Player();
-        Player dealer = new Player();
-        // System.out.println(player.bet(100));
+    // init deck
+    Deck deck = new Deck(1);
 
-        // System.out.println(player.addBalance(500));
+    // init scanner for usr input
+    Scanner scanner = new Scanner(System.in);
 
-        deck.shuffle();
-        // System.out.println(deck);
+    // setup game:
+    deck.shuffle();
+    // player is dealt, then dealer, player, dealer (face-down)
+    player.hit(deck);
+    // dealer.hit(deck);
+    player.hit(deck);
+    // dealer.hit(deck); // face-down
 
-//        while (player.handValue() < 21) {
-//          System.out.println(player.hit(deck));
-//          System.out.println(player.handValue());
-//      }
+    // game loop
+    while (!gameOver) {
+      if (player.handValue() > 21) {
+        System.out.println("Over 21, game over");
+        break;
+      }
+
+      player.display();
+      System.out.println("Value of hand " + player.handValue());
+
+      System.out.print("\nHit or Stand?\t");
+      String usrInpt = scanner.next().toLowerCase();
+
+      if (usrInpt.equals("hit")) {
         player.hit(deck);
+      }
+      else if (usrInpt.equals("stand")) {
+        gameOver = true;
+      }
 
-        player.display();
-
-        System.out.println("Hit or stand");
-        if (yuki.nextLine().toLowerCase().equals("hit")) {
-          player.hit(deck);
-          player.display();
-        }
-        else if (yuki.nextLine().toLowerCase().equals("stand")) {
-          dealer.hit(deck);
-          dealer.display();
-        }
-
-
-        // player.hit(deck);
-        // player.hit(deck);
-        // player.display();
-        // player.hit(deck);
-        // player.hit(deck);
-        // player.display();
-
-        // Player p2 = new Player();
-        // p2.addCard(new Card("♠", "A"));
-        // System.out.println(p2.handValue());
-        // p2.addCard(new Card("♥", "A"));
-        // System.out.println(p2.handValue());
-        // p2.addCard(new Card("♣", "A"));
-        // System.out.println(p2.handValue());
-
-
-
-/**
-Game Plan:
-Show player balance and ask for bet
-Initialize deck
-Have player and dealer hit
-Check for naturals
-Offer props
-hit and stand
-pay out
-restart
-**/
     }
-
+  }
 }
