@@ -1,2 +1,5 @@
-# NAMESPACE
-APCS semester 1 final project
+# NAMESPACE: Orion Roven, Paul Serbanescu, Max Schneider
+
+# Concise project description
+
+# How-to-launch instruction
