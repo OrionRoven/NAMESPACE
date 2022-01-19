@@ -76,9 +76,5 @@ public class Player {
       }
     }
 
-    public ArrayList<Card> addCard(Card card) {
-        hand.add(card);
-        return hand;
-    }
 
 }
