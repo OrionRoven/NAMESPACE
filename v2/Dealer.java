@@ -31,6 +31,7 @@ public class Dealer {
 
 
   public void display() {
+    System.out.println("\n~~~~~~ Dealer's Hand ~~~~~~");
     for (int x = 0; x < 9; x ++) {
       String lineToPrint = "";
       for(int i = 0; i < hand.size(); i ++) {
