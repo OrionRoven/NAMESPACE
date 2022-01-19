@@ -39,14 +39,14 @@ public class Woo {
       }
       if (player.handValue() > 21) {
         player.display();
-        System.out.println("Over 21, game over");
+        System.out.println("Value of hand: " + player.handValue() + ". That's over 21... GAME OVER");
         break;
       }
 
       dealer.display();
-      System.out.println("Value of hand " + dealer.handValue());
+      System.out.println("Value of hand: " + dealer.handValue());
       player.display();
-      System.out.println("Value of hand " + player.handValue());
+      System.out.println("Value of hand: " + player.handValue());
 
       System.out.print("\nHit or Stand?\t");
       String usrInpt = scanner.next().toLowerCase();

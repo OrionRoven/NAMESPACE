@@ -68,10 +68,15 @@ tales of wisdom gained...
 pserb :: v0 - create player, card, deck class with basic preliminary methods. the player class stores stats (wins, losses), the player's hand
           methods for hitting, betting, adding to balance. the Deck class constructor creates a deck of n decks (sets of 52 cards) in an ordered manner
           has method shuffle to shuffle deck (TODO: maybe alter the algo). the card class constructor takes in params suit and number, sets gamevalue based off number
-orion :: devlog - unresolved issues for printing cards next to eachother
 orion :: v1 - update suits to have ♥, ♠, ◆, ♣, rather than String representations of these characters
-max :: v1 - resolved cardArt issue (cards now print next to eachother). made every card an array of Strings, so they can all be printed one line ata time.
+max :: v1 - resolved cardArt issue (cards now print next to eachother). made every card an array of Strings, so they can all be printed one line ata time
 orion :: v1 - implemented Scanner for hit or stand (hit works and prints another card), still unsure of what to do after stand
+==============================================================
+
+2022-01-19
+--------------------------------------------------------------
+orion :: updated README.md for concise project description and how-to-launch instructions
+orion :: changed Woo.java to print exact score rather than just "Over 21"
 ==============================================================
 
 
