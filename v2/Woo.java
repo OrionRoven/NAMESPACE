@@ -29,7 +29,12 @@ public class Woo {
 
     // game loop
     while (!gameOver) {
+      if (player.handValue() == 21) {
+        System.out.println("BLACKJACK");
+        break;
+      }
       if (player.handValue() > 21) {
+        player.display();
         System.out.println("Over 21, game over");
         break;
       }
