@@ -48,10 +48,8 @@ public class Woo {
     // the dealer's
 
     // game loop
-    boolean roundOver = false;
-    int roundCounter = 0;
+
     int playCounter = 0;
-    // while (!roundOver) {
     System.out.println("Here we go, what is your bet");
     while (!gameOver) {
 
@@ -124,12 +122,7 @@ public class Woo {
         break;
 
       }
-      System.out.println("Would you like to play again?\n Yes: Y\n No: N");
-      String answer = scanner.nextLine().toLowerCase();
-      if (answer.equals("n")) {
-        roundOver = true;
       }
     }
   }
 }
-// }
