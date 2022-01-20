@@ -79,6 +79,13 @@ public class Woo {
           break;
         }
       }
+      if (playCounter == 0) {
+        System.out.println("Would you like to double down?\n Yes: Y\n No: N");
+        String ender = scanner.nextLine().toLowerCase();
+        if (ender.equals("y")) {
+          System.out.println("You have doubled down. You new bet is " );//Add main bet
+        }
+      }
       if (player.handValue() > 21) {
         player.display();
         System.out.println("Value of hand: " + player.handValue() + ". That's over 21... GAME OVER");
