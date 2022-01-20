@@ -29,14 +29,35 @@ public class Woo {
     dealer.hit(deck);
     player.hit(deck);
     dealer.hit(deck); // face-down
-
+    boolean insure = true;
     // game loop
     while (!gameOver) {
-      if (player.handValue() == 21) {
+      if (player.handValue() == 21 && dealer.handValue() != 21) {
         player.display();
         System.out.println("BLACKJACK");
         break;
+      } else if (player.handValue() == 21 && dealer.handValue() == 21){
+        dealer.display();
+        player.display();
+        System.out.println("Both you and the dealer were dealt Blackjack. All bets cancelled");
       }
+      if (dealer.hand.get(0).number == "A" && insure) {
+        if(player.insurance(dealer)) {
+          break;
+        }
+      }
+
+      dealer.display();
+      player.display();
+      insure = false;
+
+      System.out.println("Would you like to surrender?\n Yes: Y\n No: N");
+      String ender = scanner.nextLine().toLowerCase();
+      if (ender.equals("y")) {
+        System.out.println("You have surrendered and lost half your bet");
+        break;
+      }
+
       if (player.handValue() > 21) {
         player.display();
         System.out.println("Value of hand: " + player.handValue() + ". That's over 21... GAME OVER");
