@@ -30,6 +30,18 @@ public class Woo {
     player.hit(deck);
     dealer.hit(deck); // face-down
     boolean insure = true;
+
+    /* TODO: if dealer draws blackjack end game right away
+     * Deal player, dealer, player, dealer (FACEDOWN)
+     * Ask player hit or stand, continue until player > 21 (lose), = 21 (win), or stand
+     * if stand, flip over facedown dealer card, if <= 16, dealer hit, go until > 16 (stand) or = 21 (dealer win) or > 21 (player win)
+     * if stand, compare player & dealer hands, determine winner
+     * if tie, return bet to player
+     * if player win (Blackjack pays 3 to 2) return to player bet * 1.5
+     */
+
+     // TODO: maybe clearer way to show which cards are the player's and which are the dealer's
+
     // game loop
     while (!gameOver) {
       if (player.handValue() == 21 && dealer.handValue() != 21) {
@@ -82,9 +94,10 @@ public class Woo {
             dealerLose = true;
             break;
           }
-          if (dealer.handValue() < 16) {
+          if (dealer.handValue() <= 16) {
             dealer.hit(deck);
             dealer.display();
+            System.out.println("Value of hand: " + dealer.handValue());
           } else if (dealer.handValue() > 16) {
             break;
           }
