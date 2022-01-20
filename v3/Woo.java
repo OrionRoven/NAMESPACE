@@ -43,12 +43,18 @@ public class Woo {
      // TODO: maybe clearer way to show which cards are the player's and which are the dealer's
 
     // game loop
+boolean roundOver = false;
+int roundCounter = 0;
+int playCounter = 0;
+while (!roundOver) {
+	System.out.println("Here we go, what is your bet");
     while (!gameOver) {
+
       if (player.handValue() == 21 && dealer.handValue() != 21) {
         player.display();
         System.out.println("BLACKJACK");
         break;
-      } else if (player.handValue() == 21 && dealer.handValue() == 21){
+      } else if (player.handValue() == 21 && dealer.handValue() == 21 && playCounter == 0){
         dealer.display();
         player.display();
         System.out.println("Both you and the dealer were dealt Blackjack. All bets cancelled");
@@ -62,14 +68,14 @@ public class Woo {
       dealer.display();
       player.display();
       insure = false;
-
+      if (playCounter == 0) {
       System.out.println("Would you like to surrender?\n Yes: Y\n No: N");
       String ender = scanner.nextLine().toLowerCase();
       if (ender.equals("y")) {
         System.out.println("You have surrendered and lost half your bet");
         break;
       }
-
+      }
       if (player.handValue() > 21) {
         player.display();
         System.out.println("Value of hand: " + player.handValue() + ". That's over 21... GAME OVER");
@@ -83,7 +89,7 @@ public class Woo {
 
       System.out.print("\nHit or Stand?\t");
       String usrInpt = scanner.next().toLowerCase();
-
+	playCounter++;
       if (usrInpt.equals("hit")) {
         player.hit(deck);
       }
@@ -112,8 +118,14 @@ public class Woo {
         }
         // end game
         break;
+	
       }
-
+	System.out.println("Would you like to play again?\n Yes: Y\n No: N");
+	String answer = scanner.nextLine().toLowerCase();
+	if (answer.equals("n")) {
+		roundOver = true;
+	}
     }
+   }
   }
 }
