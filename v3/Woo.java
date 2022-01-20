@@ -46,14 +46,14 @@ public class Woo {
 boolean roundOver = false;
 int roundCounter = 0;
 int playCounter = 0;
-while (!roundOver) {
+// while (!roundOver) {
 	System.out.println("Here we go, what is your bet");
     while (!gameOver) {
 
       if (player.handValue() == 21 && dealer.handValue() != 21) {
         player.display();
         System.out.println("BLACKJACK");
-        break;
+        break; // TODO: if you get blackjack, breaks game loop but not round loop
       } else if (player.handValue() == 21 && dealer.handValue() == 21 && playCounter == 0){
         dealer.display();
         player.display();
@@ -128,4 +128,4 @@ while (!roundOver) {
     }
    }
   }
-}
+// }
