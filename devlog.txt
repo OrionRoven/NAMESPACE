@@ -80,6 +80,10 @@ orion :: updated README.md for concise project description and how-to-launch ins
 orion :: changed Woo.java to print exact score rather than just "Over 21"
 ==============================================================
 
+022-01-20
+--------------------------------------------------------------
+orion :: made and uploaded flowchart
+==============================================================
 
 Ascii art for playing cards:
 
