@@ -38,6 +38,8 @@ public class Card {
     public int gameValue;
     public String[] stringy;
 
+    public boolean faceDown;
+
     private static final ArrayList<String> NUMBERS = new ArrayList<>(Arrays.asList("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
     private static final ArrayList<Integer> GAMEVALUES = new ArrayList<>(Arrays.asList(11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10));
 
@@ -45,6 +47,7 @@ public class Card {
         suit = "Spade";
         number = "Ace";
         gameValue = 1;
+        faceDown = false;
     }
 
     public Card(String suit, String number) {

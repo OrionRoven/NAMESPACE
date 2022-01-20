@@ -27,9 +27,9 @@ public class Woo {
     deck.shuffle();
     // player is dealt, then dealer, player, dealer (face-down)
     player.hit(deck);
-    dealer.hit(deck);
+    dealer.hit(deck, false);
     player.hit(deck);
-    dealer.hit(deck); // face-down
+    dealer.hit(deck, true); // face-down
     boolean insure = true;
 
     /*
@@ -86,6 +86,7 @@ public class Woo {
           System.out.println("You have doubled down. You new bet is " );//Add main bet
         }
       }
+
       if (player.handValue() > 21) {
         player.display();
         System.out.println("Value of hand: " + player.handValue() + ". That's over 21... GAME OVER");
@@ -104,13 +105,14 @@ public class Woo {
         player.hit(deck);
       } else if (usrInpt.equals("stand")) {
         // dealer plays game now
+        dealer.hand.get(1).faceDown = false;
         while (true) {
           if (dealer.handValue() > 21) { // TODO: bug, ace logic (1 or 11) doesnt work, always 11
             dealerLose = true;
             break;
           }
           if (dealer.handValue() <= 16) {
-            dealer.hit(deck);
+            dealer.hit(deck, false);
             dealer.display();
             System.out.println("Value of hand: " + dealer.handValue());
           } else if (dealer.handValue() > 16) {
@@ -119,10 +121,13 @@ public class Woo {
         }
         // see who won
         if (player.handValue() > dealer.handValue() || dealerLose) {
+          dealer.display();
           System.out.println("YOU WIN!");
         } else if (player.handValue() < dealer.handValue()) {
+          dealer.display();
           System.out.println("you lose");
         } else {
+          dealer.display();
           System.out.println("TIE");
         }
         // end game

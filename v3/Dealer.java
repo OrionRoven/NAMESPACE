@@ -11,8 +11,11 @@ public class Dealer {
   }
 
   // pick topmost card from deck, add to hand, returns updated hand
-  public ArrayList<Card> hit(Deck deck) {
+  public ArrayList<Card> hit(Deck deck, boolean faceDown) {
       hand.add(deck.get(0));
+      if (faceDown) {
+        hand.get(hand.size()-1).faceDown = true;
+      }
       deck.remove(0);
       return hand;
   }
@@ -35,11 +38,13 @@ public class Dealer {
     for (int x = 0; x < 9; x ++) {
       String lineToPrint = "";
       for(int i = 0; i < hand.size(); i ++) {
-        lineToPrint+=(CardArt.makeCard(hand.get(i))[x] + "   ");
+        if (hand.get(i).faceDown == false) {
+          lineToPrint+=(CardArt.makeCard(hand.get(i))[x] + "   ");
+        } else {
+          lineToPrint += (CardArt.backCard()[x] + "   ");
+        }
       }
       System.out.println(lineToPrint);
     }
   }
-
-
 }
