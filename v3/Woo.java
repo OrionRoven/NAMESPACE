@@ -51,6 +51,11 @@ public class Woo {
 
     int playCounter = 0;
     System.out.println("Here we go, what is your bet");
+    // TODO: try and catch
+    int betAmount = scanner.nextInt();
+    String garbage = scanner.nextLine();
+    System.out.println("new bal " + player.bet(betAmount));
+
     while (!gameOver) {
 
       if (player.handValue() == 21 && dealer.handValue() != 21) {
@@ -81,8 +86,8 @@ public class Woo {
       }
       if (playCounter == 0) {
         System.out.println("Would you like to double down?\n Yes: Y\n No: N");
-        String ender = scanner.nextLine().toLowerCase();
-        if (ender.equals("y")) {
+        String dragon = scanner.nextLine().toLowerCase();
+        if (dragon.equals("y")) {
           System.out.println("You have doubled down. You new bet is " );//Add main bet
         }
       }
@@ -94,7 +99,6 @@ public class Woo {
       }
 
       dealer.display();
-      System.out.println("Value of hand: " + dealer.handValue());
       player.display();
       System.out.println("Value of hand: " + player.handValue());
 
