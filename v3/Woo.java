@@ -94,7 +94,7 @@ public class Woo {
       }
 
       dealer.display();
-      System.out.println("Value of hand: " + dealer.handValue());
+    
       player.display();
       System.out.println("Value of hand: " + player.handValue());
 
