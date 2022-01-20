@@ -75,6 +75,7 @@ orion :: v1 - implemented Scanner for hit or stand (hit works and prints another
 
 2022-01-19
 --------------------------------------------------------------
+pserb :: v2 - big changes to Woo.java to create somewhat playable version - user inputs, card display, and primitive dealer functionality
 orion :: updated README.md for concise project description and how-to-launch instructions
 orion :: changed Woo.java to print exact score rather than just "Over 21"
 ==============================================================
