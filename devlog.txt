@@ -69,6 +69,11 @@ orion :: made and uploaded flowchart
 pserb :: incorporate more methods into Woo, changes to how the dealer's cards display, fixed previous bugs
 ==============================================================
 
+022-01-21
+--------------------------------------------------------------
+
+==============================================================
+
 Ascii art for playing cards:
 
 Suit in the middle:
