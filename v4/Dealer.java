@@ -32,6 +32,10 @@ public class Dealer {
       return sum;
   }
 
+  public void clearHand() {
+    hand.clear();
+  }
+
 
   public void display() {
     System.out.println("\n~~~~~~ Dealer's Hand ~~~~~~");
