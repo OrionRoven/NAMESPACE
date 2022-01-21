@@ -85,6 +85,7 @@ orion :: changed Woo.java to print exact score rather than just "Over 21"
 022-01-20
 --------------------------------------------------------------
 orion :: made and uploaded flowchart
+pserb :: incorporate more methods into Woo, changes to how the dealer's cards display, fixed previous bugs
 ==============================================================
 
 Ascii art for playing cards:
