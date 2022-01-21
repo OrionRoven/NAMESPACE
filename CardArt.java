@@ -1,5 +1,6 @@
 public class CardArt {
 
+
   public static String[] makeCard(Card input) {
 	  	String[] _data= new String[9];
 		if (input.number!="10") {
