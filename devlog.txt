@@ -42,6 +42,7 @@ If the terminal size is small, and the number of cards is large, then printing c
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+Arrays.asList() can be used to easily convert an array to an ArrayList
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
