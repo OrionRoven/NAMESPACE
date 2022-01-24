@@ -11,29 +11,30 @@ BLACKJACK (WIP)
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
-We made cards look real nice and print next to eachother rather than ontop of one another using cardArt
+*We made cards look real nice and print next to eachother rather than ontop of one another using cardArt
 
 UNRESOLVED ISSUES
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Printing cards next to eachother has proven to me more difficult than expected.
-Our initial approach was to System.out.print (not println) each card, but that didn't work.
-It seems that we need to println the topmost section of multiple cards, then println each successive layer of the cards.
-If the terminal size is small, and the number of cards is large, then printing cards starts to get funky, but this can always be resolved by increasing the terminal size.
+*Hitting asks if you would like to play again for some reason.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
-Arrays.asList() can be used to easily convert an array to an ArrayList
+*Arrays.asList() can be used to easily convert an array to an ArrayList
+*Printing cards next to eachother has proven to me more difficult than expected.
+*Our initial approach was to System.out.print (not println) each card, but that didn't work.
+*It seems that we need to println the topmost section of multiple cards, then println each successive layer of the cards.
+*If the terminal size is small, and the number of cards is large, then printing cards starts to get funky, but this can always be resolved by increasing the terminal size.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
+*We changed the dealers hand from both face up to one face down and one face up in order to make the add uncertainty for the user.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
+*Diagnostic print statements are our friend.
 ||||||||||||||||||||||||||||||||||||||||||
-
 
 
  ______   ______   __   __   __       ______   _______
@@ -59,19 +60,27 @@ orion :: v1 - implemented Scanner for hit or stand (hit works and prints another
 2022-01-19
 --------------------------------------------------------------
 pserb :: v2 - big changes to Woo.java to create somewhat playable version - user inputs, card display, and primitive dealer functionality
+max:: created detaile dplan for all prop bets
 orion :: updated README.md for concise project description and how-to-launch instructions
 orion :: changed Woo.java to print exact score rather than just "Over 21"
 ==============================================================
 
-022-01-20
+2022-01-20
 --------------------------------------------------------------
 orion :: made and uploaded flowchart
 pserb :: incorporate more methods into Woo, changes to how the dealer's cards display, fixed previous bugs
+max:: helped pserb add methods. Wrote said methods as well as multple more.
 ==============================================================
 
-022-01-21
+2022-01-21
 --------------------------------------------------------------
+orion :: copied files to root
+max:: made it so you can play multiple rounds
+==============================================================
 
+2022-01-23
+--------------------------------------------------------------
+orion :: solved BlackJack bug where dealer draws extra cards by clearing hand after blackjack detected
 ==============================================================
 
 Ascii art for playing cards:

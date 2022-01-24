@@ -47,6 +47,10 @@ public class Dealer {
     hand.clear();
   }
 
+  public void clearHand() {
+    hand.clear();
+  }
+
 
   public void display() {
     System.out.println("\n~~~~~~ Dealer's Hand ~~~~~~");
