@@ -18,6 +18,8 @@ import java.util.Scanner;
 public class Player {
 
     private int balance;
+    public int betAmt;
+
     private int wins;
     private int losses;
 
@@ -27,6 +29,7 @@ public class Player {
     public Player() {
         // players start with $1,000 balance
         balance = 1_000;
+        betAmt = 0;
         wins = 0;
         losses = 0;
         hand = new ArrayList<>();
@@ -43,10 +46,23 @@ public class Player {
     // ace default gameValue is 11
     public int handValue() {
         int sum = 0;
+        int aceCtr = 0;
         for (int i = 0; i < hand.size(); i++) {
+            if (hand.get(i).gameValue == 11)
+              aceCtr++;
             sum += hand.get(i).gameValue;
-            if ((hand.get(i).gameValue == 11) && (sum > 21))
+        }
+        if (aceCtr > 0) {
+          while (sum > 21 && aceCtr > 0) {
+            // System.out.println("THE SUM IS === " + sum);
+            for (int j = 0; j < hand.size(); j++) {
+              if (hand.get(j).gameValue == 11) {
                 sum -= 10;
+                aceCtr--;
+                break;
+              }
+            }
+          }
         }
         return sum;
     }
@@ -60,6 +76,7 @@ public class Player {
         // can't bet more than you have
         if (amount <= balance) {
             balance -= amount;
+            betAmt = amount;
             return balance;
         }
         return balance;
@@ -69,6 +86,10 @@ public class Player {
     public int addBalance(int amount) {
         balance += amount;
         return balance;
+    }
+
+    public int getBalance() {
+      return balance;
     }
 
     public void display() {
@@ -82,17 +103,19 @@ public class Player {
       }
     }
 
-    public static boolean insurance(Dealer badGuy) {
+    public boolean insurance(Dealer badGuy) {
   		System.out.println("Dealer has an ace. Do you want insurance?");
       System.out.println("Yes: Y");
       System.out.println("No: N");
       Scanner look = new Scanner(System.in);
       if (look.nextLine().toLowerCase().equals("y")) {
         System.out.println("How much do you want to insure. Remember, you can only insure half your main bet, but if the dealer has BlackJack you get paid back double.");
-       int insuranceBet = look.nextInt(); // TODO: String cannot be converted to int
+        int insuranceBet = look.nextInt();
+        this.bet(insuranceBet);
         System.out.println("You have insured for $" + insuranceBet + "");
         if (badGuy.handValue() == 21) {
           System.out.println("Congrats! The Dealer had Blackjack. You have been payed $" + (insuranceBet*2));
+          this.addBalance(insuranceBet*2);
           return true;
         } else {
           System.out.println("Sorry, the Dealer did not have blackjack and your insurance bet has been collected");
@@ -109,6 +132,11 @@ public class Player {
   	public static void doubleDown() {
 
   	}
+
+    // FOR TESTING PURPOSES
+    public void addCard(Card card) {
+      hand.add(card);
+    }
 
 
 }

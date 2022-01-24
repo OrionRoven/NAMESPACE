@@ -5,8 +5,6 @@ public class Dealer {
 
 
   public Dealer() {
-      // players start with $1,000 balance
-
       hand = new ArrayList<>();
   }
 
@@ -23,14 +21,27 @@ public class Dealer {
   // ace has value 1 or 11
   // ace default gameValue is 11
   public int handValue() {
-      int sum = 0;
-      for (int i = 0; i < hand.size(); i++) {
-          sum += hand.get(i).gameValue;
-          if ((hand.get(i).gameValue == 11) && (sum > 21))
-              sum -= 10;
+    int sum = 0;
+    int aceCtr = 0;
+    for (int i = 0; i < hand.size(); i++) {
+        if (hand.get(i).gameValue == 11)
+          aceCtr++;
+        sum += hand.get(i).gameValue;
+    }
+    if (aceCtr > 0) {
+      while (sum > 21 && aceCtr > 0) {
+        // System.out.println("THE SUM IS === " + sum);
+        for (int j = 0; j < hand.size(); j++) {
+          if (hand.get(j).gameValue == 11) {
+            sum -= 10;
+            aceCtr--;
+            break;
+          }
+        }
       }
-      return sum;
-  }
+    }
+    return sum;
+}
 
   public void clearHand() {
     hand.clear();
