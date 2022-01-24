@@ -15,6 +15,7 @@ wow we so BOSS bc...
 
 UNRESOLVED ISSUES
 *Hitting asks if you would like to play again for some reason.
+*Scrapping the forfeit/play again mechanic resolved this.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
