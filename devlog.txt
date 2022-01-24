@@ -4,7 +4,7 @@ Orion Roven
 Max Schneider
 pd 7
 ---------------------
-BLACKJACK (WIP)
+BLACKJACK
 
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
@@ -83,28 +83,7 @@ max:: made it so you can play multiple rounds
 orion :: solved BlackJack bug where dealer draws extra cards by clearing hand after blackjack detected
 ==============================================================
 
-Ascii art for playing cards:
-
-Suit in the middle:
-♥, ♠, ◆, ♣
-
-Face:
- ___________
-│ A         │
-│           │
-│           │
-│     ♠     │
-│           │
-│           │
-│         A │
- ‾‾‾‾‾‾‾‾‾‾‾
-Back:
- ___________
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
-│░░░░░░░░░░░│
- ‾‾‾‾‾‾‾‾‾‾‾
+2022-01-24
+--------------------------------------------------------------
+pserb :: finished game by solving many bugs, implementing betting mechanic, and using wait function from TerminallyIll.java in v5 to slow down the pace of the game
+==============================================================
