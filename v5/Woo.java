@@ -74,13 +74,17 @@ public class Woo {
             break;
           }
         }
-        
+
         if (gameCounter == 0)
           System.out.println("Here we go, what is your bet");
+
+
 
         if (player.handValue() == 21 && dealer.handValue() != 21) {
           player.display();
           System.out.println("BLACKJACK");
+          player.clearHand();//fix
+          dealer.clearHand();
           break; // TODO: if you get blackjack, breaks game loop but not round loop IT BREAKY
         } else if (player.handValue() == 21 && dealer.handValue() == 21 && gameCounter == 0) {
           dealer.display();
@@ -122,7 +126,7 @@ public class Woo {
         }
 
         dealer.display();
-      
+
         player.display();
         System.out.println("Value of hand: " + player.handValue());
 

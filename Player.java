@@ -51,6 +51,10 @@ public class Player {
         return sum;
     }
 
+    public void clearHand() {
+      hand.clear();
+    }
+
     // returns new balance
     public int bet(int amount) {
         // can't bet more than you have
